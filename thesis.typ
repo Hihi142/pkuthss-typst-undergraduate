@@ -1,39 +1,37 @@
 #import "template.typ": *
 
-
 #show: doc => UndergraduateThesis(
   // ctitle必填
-  ctitle: "Typst：世界前沿的排版系统",
+  ctitle: "一种基于幽灵变量的存在量词消除方法",
   doc,
 )
 
 // 封面修改后位本科生版本
 // TitlePage参数全部必填
 #TitlePage(
-  chinese_title: [Typst：世界前沿的排版系统],
-  english_title: [Typst: State-of-art \ Formatting System],
-  name : "十一",
-  studentid : "20000xxxxx",
+  chinese_title: [ 一种基于幽灵变量的存在量词消除方法 ],
+  english_title: [ Removing Existentials with Ghost Variables ],
+  name : "智旭生",
+  studentid : "2100013006",
   department : "信息科学与技术学院",
   major : "信息与计算科学",
-  supervisor_name : "斯公子",
+  supervisor_name : "王迪",
   year_and_month : "二〇二五年五月"
 ) <title-page>
-
 
 // 导师评价
 // CheckSheet参数全部必填
 #CheckSheet(
-  name : "十一",
-  studentid : "20000xxxxx",
+  name : "智旭生",
+  studentid : "2100013006",
   school : "信息科学与技术学院",
   major : "信息与计算科学",
-  supervisor : "斯公子",
+  supervisor : "王迪",
   department : "计算机学院",
   grade : "中等",
   title : "助理教授",
-  chinese_title : "Typst：世界前沿的排版系统",
-  english_title : "Typst: State-of-art Formatting System",
+  chinese_title : "一种基于幽灵变量的存在量词消除方法",
+  english_title : "Removing Existentials with Ghost Variables",
   sign_pic : image("./images/老师签名.png"),
   year : 2024,
   month : 5,
@@ -86,7 +84,15 @@ This paper offers a template for undergraduate thesis in Peking University.
 #doc_start()
 
 
-= 基本功能 <intro>
+#include "1 intro.typ"
+#include "2 background.typ"
+#include "3 theory.typ"
+#include "4 impl.typ"
+#include "5 discussion.typ"
+
+= 总结 <conclusion>
+
+= 教程 <turorial>
 
 == 标题
 
@@ -508,7 +514,7 @@ Typst 支持 BibLaTeX 格式的 `.bib` 文件，同时也新定义了一种基�
 
 == 理论一 <theory1>
 
-让我们首先回顾一下 @intro 中的部分公式：
+让我们首先回顾一下 @turorial 中的部分公式：
 
 $ frac(a^2, 2) $
 $ vec(1, 2, delim: "[") $
@@ -518,7 +524,7 @@ $ lim_x =
 
 == 理论二
 
-在 @theory1 中，我们回顾了 @intro 中的公式。下面，我们来推导一些新的公式：
+在 @theory1 中，我们回顾了 @turorial 中的公式。下面，我们来推导一些新的公式：
 
 #lorem(500)
 
